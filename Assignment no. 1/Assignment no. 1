@@ -1,0 +1,42 @@
+*ASSIGNMENT-1*
+
+Perform the following operations using Python on any open source dataset (e.g., data.csv)
+
+- Import all the required Python Libraries.
+- Locate an open source data from the web (e.g. https://www.kaggle.com). Provide a. clear description of the data and its source (i.e., URL of the web 
+site).
+- Load the Dataset into pandas data frame.
+- Data Preprocessing: check for missing values in the data using pandas insull(), describe() function to get some initial statistics. Provide variable 
+descriptions. Types of variables etc. Check the dimensions of the data frame.
+- Data Formatting and Data Normalization: Summarize the types of variables by checking the data types (i.e., character, numeric, integer, factor, and 
+logical) of the variables in the data set. If variables are not in the correct data type, apply proper type conversions.
+- Turn categorical variables into quantitative variables in Python.
+
+1. 
+import pandas as pd
+import matplotlib.pylab as plt
+import numpy as np
+
+2. Load the dataset using pandas library
+
+df = pd.read_csv("iris.csv")
+
+3. Check the contents of dataset using df.head() and df.tail() functions
+
+df.head(5)
+df.tail(5)
+df.info()
+df.describe()
+
+4. To find then null values present in the dataset
+df.isnull()
+dataset.columns =  The column labels of the Dataset
+   
+   6. dataset.dtypes  =  Return the dtypes in the Dataset
+    7. dataset['Column name] = Read the Data Column wise
+    8. dataset.iloc[5]  =  Purely integer-location based indexing for selection by position.
+    9. dataset[0:3]     =  Selecting via [], which slices the rows.
+    10.dataset.loc[:, ["Col_name1", "col_name2"]] =  Selection by label
+    11. dataset.iloc[:n, :] = a subset of the first n rows of the original data 
+    12. dataset.iloc[:, :n] = a subset of the first n columns of the original data 
+    13. dataset.iloc[:m, :n] = a subset of the first m rows and the first n columns
